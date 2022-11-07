@@ -46,7 +46,7 @@ section#hero {
     background-color: var(--blue);
     // border-radius: 0 0 200px 0;
     // box-shadow: 0 0 5px 5px rgba(white,0.2);
-    min-height: 70vh;
+    min-height: 80vh;
     display: flex; align-items: center;
     position: relative;
 
@@ -71,7 +71,7 @@ section#hero {
             display: flex;
             flex-direction: column;
             color: var(--orange);
-            font-size: 2.8rem;
+            font-size: 2.6rem;
 
             span:nth-child(2){
                 font-weight: bold;
@@ -80,24 +80,107 @@ section#hero {
 
         p {
             color: var(--white);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
         }
 
         button {
             width: 200px;
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: var(--white);
             border-radius: 200px;
             background-color: var(--orange);
             padding: 0.5em 0;
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scaleX(1.05)
+            }
         }
     }
 }
 
 @import 'divider';
 
-section#test {
+section#projects {
+    padding: 1em;
     height: 100vh;
+
+    header {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--blue);
+        margin: 1em 0 2em 0;
+    }
+
+    #projects_container {
+
+        .project {
+            background-color: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            width: 90%;
+            min-height: 400px;
+            margin: 1.5em auto;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 15px 5px rgba(black,0.2);
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+        .project_image {
+            width: 100%;
+            aspect-ratio: 19/12;
+            background-color: rgb(189, 189, 189);
+            margin-top: 20px;
+            display: flex;align-items: center;justify-content: center;
+            font-size: 2rem;
+            color: grey;
+        }
+
+        .project_description {
+            background-color: var(--blue);
+            flex: 1;
+            margin: 10px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            .project_title {
+                color: var(--orange);
+                font-weight: bold;
+                padding: 0.2em;
+            }
+
+            .project_context {
+                color: var(--white)
+            }
+
+            a {
+                color: var(--white);
+                margin-top: auto;
+                padding: 0.5em;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.3em;
+
+                &:hover {
+                    color: var(--orange);
+                    font-weight: bold;
+                }
+            }
+
+            a span {
+                font-size: 2rem
+            }
+        }
+    }
 }
 
 @import 'media_query';
