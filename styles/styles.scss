@@ -9,6 +9,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 
     .container {
         display: flex;
@@ -41,10 +42,13 @@ nav {
 
 section#hero {
     padding-top: var(--navbar-height);
+    padding-bottom: 2em;
     background-color: var(--blue);
-    border-radius: 0 0 200px 0;
-    box-shadow: 0 0 5px 5px rgba(white,0.2);
-    height: 70vh;
+    // border-radius: 0 0 200px 0;
+    // box-shadow: 0 0 5px 5px rgba(white,0.2);
+    min-height: 70vh;
+    display: flex; align-items: center;
+    position: relative;
 
     .container {
         width: 100%;
@@ -88,9 +92,9 @@ section#hero {
             padding: 0.5em 0;
         }
     }
-
-
 }
+
+@import 'divider';
 
 section#test {
     height: 100vh;
